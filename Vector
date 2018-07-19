@@ -304,5 +304,4 @@ template <typename T> void Vector<T>::merge(Rank lo,Rank mid,Rank hi){
         //到此，两段子向量就被有序并入A了。
     }//逻辑紧凑，但效率不如拆分处理
     delete [] B;
-}
-```
+}```
