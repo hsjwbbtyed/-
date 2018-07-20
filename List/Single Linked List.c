@@ -19,9 +19,9 @@ int IsEmpty(List L){
 
 
 
-/*如果P是在表中的末尾位置，返回1*/
+//如果P是在表中的末尾位置，返回1
 int IsLast(Position P) {
-         return P->Next==NULL;
+    return P->Next==NULL;
 }
 
 
@@ -29,7 +29,7 @@ int IsLast(Position P) {
 Position FindPrevious(int X,List L){
     Position P;                 //声明一个节点指针，并指向头节点（和表头一样）
     P=L;
-    /* 2*/while (P!=NULL && P->Next->data!=X) { //P没有走到末尾，同时还没找到给定的X时
+   while (P!=NULL && P->Next->data!=X) { //P没有走到末尾，同时还没找到给定的X时
         P=P->Next;                  //P向后走
     }           //走到这一步时，说明要么没找到，P=NULL（结尾处），要么找到了，P=前驱的位置
     return P;
