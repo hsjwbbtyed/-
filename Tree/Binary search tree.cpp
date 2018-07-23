@@ -1,6 +1,6 @@
 
 //出于布局合理的考虑，把主函数放在中间
-
+//用了一些C++的STL（level order的时候用到队列），但主体还是由C组成
 
 #include <cstdio>
 #include <cstdlib>
