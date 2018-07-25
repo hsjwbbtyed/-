@@ -89,10 +89,6 @@ FindMax( AvlTree T )
 
 int max(int a,int b){ return a>b?a:b;}
 
-int BalFact(Position P){
-    return P?Height(P->lc)-Height(P->rc):0;
-}
-
 // This function can be called only if g has a left child
 // Perform a rotate between a node (g) and its left child
 // Update heights, then return new root
