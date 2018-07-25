@@ -51,7 +51,7 @@ int Delete(PriorityQueue H){
     MinElement=H->Element[1];//取出树根的值，根据heap order它是最小元素
     last=H->Element[H->size--];//取出末尾元素以便后续安置
     //执行下滤，搜索每个膝下有子的父节点
-    //具体做法是：把last放在沿着从根开始包含最小儿子的一条路径的某个恰当位置，这是步进条件的由来
+    //()
     for (i=1; i*2<=H->size; i=child) {
         //首先确定下滤的孩子索引（找到更小的那个）
         child=i<<1;//先取左孩子
