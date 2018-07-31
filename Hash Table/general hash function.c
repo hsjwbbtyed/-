@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cstdio>
 
-typedef unsigned Index;
+typedef unsigned int Index;
 
 Index TrivialHash(const char* Key,int size){// a simple hash function
     
