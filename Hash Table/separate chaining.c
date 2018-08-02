@@ -8,29 +8,6 @@
 typedef unsigned Index;
 
 
-Index TrivialHash(const char* Key,int size){// a simple hash function
-    
-    unsigned int val=0;
-    while (*Key !='\0') {
-        val+=*Key++;
-    }
-    return val%size;
-}
-
-Index BadHashEx(const char* Key,int size){
-    return (Key[0]+27*Key[1]+720*Key[2])%size;
-    //easy to collision
-}
-
-Index greatHash(const char* Key,int size){
-    unsigned int val=2;
-    while (*Key!='\0')
-        val=(val<<5)+ *Key++;
-    
-        return val%size;
-}
-
-
 Index Hash(int key,int size){
     return key%size;
 }
@@ -50,8 +27,9 @@ HashTable Init(int size){
     H->TableSize=aPrime;
     
     //Allocate lists
-    H->TheLists=(List*)malloc(sizeof(List)*H->TableSize);
-//    List header=(List)malloc(sizeof(struct ListNode));
+    H->TheLists=(List*)malloc(sizeof(List) * H->TableSize);
+//    List header=(List)malloc(H->TableSize * sizeof(struct ListNode));
+    
     //Allocate list headers
     for (i=0; i<H->TableSize; i++) {
         H->TheLists[i]=(List)malloc(sizeof(struct ListNode));
