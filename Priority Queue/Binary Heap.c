@@ -1,10 +1,19 @@
+//
+//  main.cpp
+//  Heap
+//
+//  Created by rmbp on 2018/7/25.
+//  Copyright © 2018年 rmbp. All rights reserved.
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "BinHeap.h"
+
+
 //以小根堆为例
 
 #define MinData (-2)
-typedef struct HeapStruct *PriorityQueue;
+
 
 void swap(int *a,int *b) {
     int t=*a;
@@ -13,13 +22,9 @@ void swap(int *a,int *b) {
 }
 
 
-struct HeapStruct {
-    int capacity; //总空间
-    int size;     //所有实际元素的大小
-    int *Element;
-};
 
-PriorityQueue Init(int maxValue){
+
+PriorityQueue Init(int maxValue){//create a empty heap
     PriorityQueue H;
     H=(PriorityQueue)malloc(sizeof(HeapStruct));
     
@@ -50,7 +55,6 @@ int Delete(PriorityQueue H){
     
     MinElement=H->Element[1];//取出树根的值，根据heap order它是最小元素
     last=H->Element[H->size--];//取出末尾元素以便后续安置
-    
     //执行下滤，搜索每个膝下有子的父节点
     //具体做法是：把last放在沿着从根开始包含最小儿子的一条路径的某个恰当位置，这是步进条件的由来
     for (i=1; i*2<=H->size; i=child) {
@@ -107,3 +111,4 @@ int main(){
     Display(pq);
     printf("The min is %d\n",Delete(pq));
 }
+
