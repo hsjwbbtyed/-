@@ -1,3 +1,4 @@
+//Quad means Quadratic (Probing )
 #ifndef HashQuad_h
 #define HashQuad_h
 typedef unsigned int Index;
