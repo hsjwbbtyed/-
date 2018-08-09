@@ -1,6 +1,6 @@
 
 #include "HashQuad.h"
-#define aPrime 30
+#define aPrime 307
 #define MinTableSize 5
 #include <stdio.h>
 #include <stdlib.h>
