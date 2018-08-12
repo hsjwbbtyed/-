@@ -1,4 +1,4 @@
-#ifndef BinHeap_
+#ifndef BinHeap_h
 #define BinHeap_h
 struct HeapStruct;
 typedef struct HeapStruct *PriorityQueue;
