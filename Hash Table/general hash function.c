@@ -1,4 +1,4 @@
-#define MinTableSize 
+#define MinTableSize 5
 
 #include "HashSep.h"
 #include <iostream>
