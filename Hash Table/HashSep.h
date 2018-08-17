@@ -1,5 +1,5 @@
 #ifndef HashSep_h
-#define HashSep_
+#define HashSep_h
 struct ListNode;
 typedef struct ListNode *Position;
 struct HashTb1;
