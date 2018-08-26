@@ -14,6 +14,20 @@
 static Position Origin=NULL;
 
 
+int main() {
+    srand(time(NULL));
+    AvlTree a=nullptr;
+    int nodeCnt,del;
+    printf("Please input how many nodes in the avl tree: ");
+    scanf("%d",&nodeCnt);
+    for(int i=0;i<nodeCnt;i++) a=Insert(rand()%(nodeCnt<<1), a);
+//    Preorder(a);
+    printf("\n\nThe height of avlt with %d nodes is : %d\n",nodeCnt,Height(a));
+    
+}
+
+
+
 SplayTree Init(){
     if (!Origin) {   //When the tree we talked about is non-exsitent.
         Origin=(SplayTree)malloc(sizeof(struct SplayNode));
