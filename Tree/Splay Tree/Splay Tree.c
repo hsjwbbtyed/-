@@ -166,8 +166,3 @@ SplayTree Remove(int Item,SplayTree T){
 }
 
 
-
-int main(int argc, const char * argv[]) {
-    
-    
-}
