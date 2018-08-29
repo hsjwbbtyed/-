@@ -1,6 +1,6 @@
 #include <cstdio>
 #include <cstdlib>
-struct Node;                //先声明一个节点，后面定义
+struct Node;                //先声明一个节点，下面给出定义
 typedef struct Node *PtrToNode;     /*声明节点指针，并且将其类型替换为PtrToNode（替换之前是struct Node*），这样做的目的是方便我们理解*/
 
 
