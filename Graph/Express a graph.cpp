@@ -5,22 +5,27 @@ const int N=100010;
 
 int n,m,vis[N],cnt=0;
 
-struct Edge{
-	int next,weight;
-};
 
-vector<Edge> G[N];
+
+vector<int> G[N];
 
 void addedge(int u,int v){     // without weight
 	G[u].push_back(v);G[v].push_back(u);
 }
-void addedge_w(int u,int v,int w){  //with weight
+
+//with weight 
+/*-------------------------------------------------
+struct Edge{
+	int next,weight;
+};
+
+void addedge_w(int u,int v,int w){  
 	Edge e1;  e1.next=v; e1.weight=w;
 	G[u].push_back(e1);
 	Edge e2;  e2.next=u; e2.weight=w;
 	G[v].push_back(e2);
 }
-
+---------------------------------------------------*/
 
 void dfs(int u){
 	printf("%d ",u);
