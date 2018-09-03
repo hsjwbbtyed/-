@@ -9,7 +9,7 @@
 using namespace std;
 
 int g[310][310];
-int n,m,a,b,c,minn[310],mmax=-1;
+int n,m,a,b,c,Min_n[310],mmax=-1;    //Min_n[i] 是 
 bool u[310];
 int main(){
     scanf("%d%d",&n,&m);
@@ -18,26 +18,28 @@ int main(){
         g[a][b]=c;
         g[b][a]=c;
     }
-    memset(minn,0x7f,sizeof(minn));    
-    minn[1]=0;
+    memset(Min_n,0x7f,sizeof(Min_n));    
+    Min_n[1]=0;
     memset(u,1,sizeof(u));
     for(int i=1;i<=n;++i){
         int k=0;
         for(int j=1;j<=n;j++)
-            if(u[j]&&(minn[j]<minn[k]))
+            if(u[j]&&(Min_n[j]<Min_n[k]))
                 k=j;
         u[k]=0;
         for(int j=1;j<=n;j++)
-            if(u[j] && g[k][j]!=0 && g[k][j]<minn[j])
-                minn[j]=g[k][j];
+            if(u[j] && g[k][j]!=0 && g[k][j]<Min_n[j])
+                Min_n[j]=g[k][j];
     }
     for(int i=1;i<=n;++i){
-        if(minn[i]>mmax)
+        if(Min_n[i]>mmax)
             mmax=minn[i];
     }
     printf("%d %d",n-1,mmax);
     return 0;
 }
+
+
 
 
 //optimize by heap
