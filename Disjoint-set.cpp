@@ -1,6 +1,6 @@
 #include<cstdio>
 #include <algorithm>
-using namespace std;
+using namespace std
 const int N=100000+10;
 
 int par[N],n,m,size[N];
