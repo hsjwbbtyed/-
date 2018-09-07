@@ -4,7 +4,7 @@ typedef int PtrToNode;       //因为现在不需要把数据和指针绑定，�
 
 typedef PtrToNode List;
 
-typedef PtrToNode Position
+typedef PtrToNode Position;
 
 #define SpaceSize 100
 
